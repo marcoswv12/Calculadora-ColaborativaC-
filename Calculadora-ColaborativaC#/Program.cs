@@ -37,12 +37,12 @@ class Program
 
     static void soma()
     {
-        Resultado = a + b;
+  
     }
 
     static void subtração()
     { 
-        Resultado = a - b;
+        
     }
 
     static void raizquadrada()
@@ -51,3 +51,4 @@ class Program
         Resultado = raiz;
     }
 }
+
