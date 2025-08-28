@@ -1,5 +1,4 @@
 using System;
-
 class Program
 {
     static float Resultado = 0;
@@ -51,4 +50,5 @@ class Program
         Resultado = raiz;
     }
 }
+
 
