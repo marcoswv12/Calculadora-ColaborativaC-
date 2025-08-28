@@ -15,22 +15,30 @@ class Program
             b = float.Parse(Console.ReadLine());
             soma();
             Console.WriteLine(Resultado);
+             Console.WriteLine("\nPressione qualquer tecla para sair...");
+                Console.ReadKey();
         }
         else if(operação == '-')
         {
             b = float.Parse(Console.ReadLine());
             subtração();
             Console.WriteLine(Resultado);
+             Console.WriteLine("\nPressione qualquer tecla para sair...");
+                Console.ReadKey();
         }
          else if (operação == '*')
         {
             Multiplicacao();
             Console.WriteLine(Resultado);
+              Console.WriteLine("\nPressione qualquer tecla para sair...");
+                Console.ReadKey();
         }
         else if(operação == '~')
         {
             raizquadrada();
             Console.WriteLine(Resultado);
+             Console.WriteLine("\nPressione qualquer tecla para sair...");
+                Console.ReadKey();
         }
         else
         {
@@ -41,12 +49,12 @@ class Program
 
     static void soma()
     {
-  
+        Resultado = a+b;
     }
 
     static void subtração()
     { 
-        
+        Resultado = a - b; 
     }
      static void Multiplicacao()
     {
@@ -59,6 +67,7 @@ class Program
         Resultado = raiz;
     }
 }
+
 
 
 
