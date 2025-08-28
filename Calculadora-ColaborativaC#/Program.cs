@@ -66,7 +66,7 @@ class Program
         float raiz = (float)Math.Sqrt(a);
         Resultado = raiz;
     }
-    using System;
+   using System;
 
 public class Program
 {
@@ -106,10 +106,22 @@ public class Program
             int n1 = numero1 - '0'; // transforma char em número
             int n2 = numero2 - '0';
 
-            if (operacao == '+') valorParenteses = n1 + n2;
-            if (operacao == '-') valorParenteses = n1 - n2;
-            if (operacao == '*') valorParenteses = n1 * n2;
-            if (operacao == '/') valorParenteses = n1 / (double)n2;
+            if (operacao == '+')
+            {
+                valorParenteses = n1 + n2;
+            }
+            if (operacao == '-')
+            {
+                valorParenteses = n1 - n2;
+            }
+            if (operacao == '*')
+            {
+                valorParenteses = n1 * n2;
+            }
+            if (operacao == '/')
+            {
+                valorParenteses = n1 / (double)n2;
+            }
         }
 
         // 2: usar o resultado do parêntese no resto da conta
@@ -119,17 +131,28 @@ public class Program
 
         int nFinal = numeroFinal - '0';
 
-        double resultado = 0;
-        if (operacaoFinal == '+') resultado = valorParenteses + nFinal;
-        if (operacaoFinal == '-') resultado = valorParenteses - nFinal;
-        if (operacaoFinal == '*') resultado = valorParenteses * nFinal;
-        if (operacaoFinal == '/') resultado = valorParenteses / nFinal;
+        double resultado = 0; 
+
+        if (operacaoFinal == '+')
+        {
+            resultado = valorParenteses + nFinal;
+        }
+        if (operacaoFinal == '-')
+        {
+            resultado = valorParenteses - nFinal;
+        }
+        if (operacaoFinal == '*')
+        {
+            resultado = valorParenteses * nFinal;
+        }
+        if (operacaoFinal == '/')
+        {
+            resultado = valorParenteses / nFinal;
+        }
 
         Console.WriteLine("Resultado: " + resultado);
     }
 }
-}
-
 
 
 
