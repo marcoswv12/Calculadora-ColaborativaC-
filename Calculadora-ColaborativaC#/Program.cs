@@ -35,9 +35,15 @@ class Program
  resultado = a + b;
   }
     static void subtração()
-  { 
+  {
+      resultado = a - b; 
 
+          Console.WriteLine($"\nResultado: {a} - {b} = {resultado}");
+
+         Console.WriteLine("\nPressione qualquer tecla para sair...");
+          Console.ReadKey();
   }
 }
+
 
 
