@@ -38,6 +38,15 @@ class Program
                 Console.ReadKey();
              AdicionarHistorico($"{a} * {b} = {Resultado}");
         }
+         else if(operação == '/')
+
+        {
+            Divisão();
+            Console.WriteLine(resultado)
+                 Console.WriteLine("\nPressione qualquer tecla para sair...");
+                Console.ReadKey();
+             AdicionarHistorico($"{a} * {b} = {Resultado}");
+        }
         else if(operação == '~')
         {
             raizquadrada();
@@ -71,6 +80,12 @@ class Program
     {
         Resultado = a * b;
     }
+     static void Divisao()
+    {
+        if (b != 0)
+        {
+            Resultado = a / b;
+        }
 
     static void raizquadrada()
     {
@@ -95,6 +110,7 @@ class Program
         }
     }
 }
+
 
 
 
