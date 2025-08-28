@@ -22,6 +22,11 @@ class Program
             subtração();
             Console.WriteLine(Resultado);
         }
+         else if (operação == '*')
+        {
+            Multiplicacao();
+            Console.WriteLine(Resultado);
+        }
         else if(operação == '~')
         {
             raizquadrada();
@@ -43,6 +48,10 @@ class Program
     { 
         
     }
+     static void Multiplicacao()
+    {
+        Resultado = a * b;
+    }
 
     static void raizquadrada()
     {
@@ -50,5 +59,6 @@ class Program
         Resultado = raiz;
     }
 }
+
 
 
