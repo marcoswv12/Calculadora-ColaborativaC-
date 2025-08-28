@@ -1,4 +1,3 @@
-
 using System;
 class Program
 {
@@ -7,19 +6,25 @@ class Program
     static float b = 0;
 
     public static void Main(string[] args)
-        {
+    {
         a = float.Parse(Console.ReadLine());
-        char operação = char.Parse(Console.ReadLine()); 
-        b = float.Parse(Console.ReadLine());
-        
+        char operação = char.Parse(Console.ReadLine());
+
         if(operação == '+')
         {
+            b = float.Parse(Console.ReadLine());
             soma();
             Console.WriteLine(Resultado);
         }
         else if(operação == '-')
         {
+            b = float.Parse(Console.ReadLine());
             subtração();
+            Console.WriteLine(Resultado);
+        }
+        else if(operação == '~')
+        {
+            raizquadrada();
             Console.WriteLine(Resultado);
         }
         else
@@ -27,23 +32,23 @@ class Program
             Console.WriteLine("Operação invalida.");
             return;
         }
-       
     }
-    
-  static void soma()
-  {
- resultado = a + b;
-  }
+
+    static void soma()
+    {
+  
+    }
+
     static void subtração()
-  {
-      resultado = a - b; 
+    { 
+        
+    }
 
-          Console.WriteLine($"\nResultado: {a} - {b} = {resultado}");
-
-         Console.WriteLine("\nPressione qualquer tecla para sair...");
-          Console.ReadKey();
-  }
+    static void raizquadrada()
+    {
+        float raiz = (float)Math.Sqrt(a);
+        Resultado = raiz;
+    }
 }
-
 
 
