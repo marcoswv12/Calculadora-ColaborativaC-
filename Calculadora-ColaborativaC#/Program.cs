@@ -32,11 +32,12 @@ class Program
     
   static void soma()
   {
-
+ resultado = a + b;
   }
     static void subtração()
   { 
 
   }
 }
+
 
