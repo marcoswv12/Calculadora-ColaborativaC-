@@ -4,7 +4,9 @@ class Program
     static float Resultado = 0;
     static float a = 0;
     static float b = 0;
-
+    
+ static List<string> historico = new List<string>();
+    
     public static void Main(string[] args)
     {
         a = float.Parse(Console.ReadLine());
@@ -17,6 +19,7 @@ class Program
             Console.WriteLine(Resultado);
              Console.WriteLine("\nPressione qualquer tecla para sair...");
                 Console.ReadKey();
+            AdicionarHistorico($"{a} + {b} = {Resultado}");
         }
         else if(operação == '-')
         {
@@ -25,6 +28,7 @@ class Program
             Console.WriteLine(Resultado);
              Console.WriteLine("\nPressione qualquer tecla para sair...");
                 Console.ReadKey();
+            AdicionarHistorico($"{a} - {b} = {Resultado}");
         }
          else if (operação == '*')
         {
@@ -32,6 +36,7 @@ class Program
             Console.WriteLine(Resultado);
               Console.WriteLine("\nPressione qualquer tecla para sair...");
                 Console.ReadKey();
+             AdicionarHistorico($"{a} * {b} = {Resultado}");
         }
         else if(operação == '~')
         {
@@ -39,12 +44,18 @@ class Program
             Console.WriteLine(Resultado);
              Console.WriteLine("\nPressione qualquer tecla para sair...");
                 Console.ReadKey();
+            AdicionarHistorico($"{a} = {Resultado}");
         }
         else
         {
             Console.WriteLine("Operação invalida.");
             return;
         }
+        Console.WriteLine("\n Histórico de operações:");
+        MostrarHistorico();
+
+        Console.WriteLine("\nPressione qualquer tecla para sair...");
+        Console.ReadKey();
     }
 
     static void soma()
@@ -65,6 +76,23 @@ class Program
     {
         float raiz = (float)Math.Sqrt(a);
         Resultado = raiz;
+    }
+}
+   static void AdicionarHistorico(string op)
+    {
+        if (historico.Count == 5)
+        {
+            historico.RemoveAt(0);
+        }
+        historico.Add(op);
+    }
+
+    static void MostrarHistorico()
+    {
+        foreach (var op in historico)
+        {
+            Console.WriteLine(op);
+        }
     }
 }
 
