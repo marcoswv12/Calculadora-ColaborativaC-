@@ -1,0 +1,30 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        x:Class="CalculadoraApp.MainWindow"
+        Width="300" Height="400"
+        Title="Calculadora">
+  <StackPanel Margin="10">
+    <TextBox Name="txtDisplay" FontSize="24" IsReadOnly="True" Height="50"/>
+    <UniformGrid Columns="4" Rows="5" Margin="0,10,0,0">
+      <Button Content="7" Margin="5" Click="Button_Click"/>
+      <Button Content="8" Margin="5" Click="Button_Click"/>
+      <Button Content="9" Margin="5" Click="Button_Click"/>
+      <Button Content="+" Margin="5" Click="Operation_Click"/>
+      <Button Content="4" Margin="5" Click="Button_Click"/>
+      <Button Content="5" Margin="5" Click="Button_Click"/>
+      <Button Content="6" Margin="5" Click="Button_Click"/>
+      <Button Content="-" Margin="5" Click="Operation_Click"/>
+      <Button Content="1" Margin="5" Click="Button_Click"/>
+      <Button Content="2" Margin="5" Click="Button_Click"/>
+      <Button Content="3" Margin="5" Click="Button_Click"/>
+      <Button Content="*" Margin="5" Click="Operation_Click"/>
+      <Button Content="0" Margin="5" Click="Button_Click"/>
+      <Button Content="." Margin="5" Click="Button_Click"/>
+      <Button Content="√" Margin="5" Click="Operation_Click"/>
+      <Button Content="/" Margin="5" Click="Operation_Click"/>
+      <Button Content="C" Margin="5" Click="Clear_Click"/>
+      <Button Content="=" Margin="5" Click="Equals_Click" Grid.ColumnSpan="4"/>
+      <Button Content="Histórico" Click="History_Click" />
+    </UniformGrid>
+  </StackPanel>
+</Window>
